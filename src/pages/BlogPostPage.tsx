@@ -52,8 +52,8 @@ const BlogPostPage = () => {
             
             {/* Main Content - Now full width and with "floating book" styling */}
             <div className="md:w-4/5 md:pl-8">
-              <div className="bg-white rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300 h-[75vh] overflow-y-auto">
-                <div className="relative p-8">
+              <div className="bg-white rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300 h-[75vh] overflow-hidden">
+                <div className="relative p-8 h-full overflow-y-auto">
                   <BlogContent post={post} />
                   <CommentSection postId={post.id} />
                   
