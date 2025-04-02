@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -77,10 +78,10 @@ const ContactPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="section-title">Get in Touch</h2>
+              <h2 className="section-title">Let's Connect</h2>
               <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
               <p className="text-gray-600">
-                Whether you're building a new learning program, reimagining your onboarding process, or just need someone to help align training with your business goals—I'm here to help.
+                Whether you're building a new learning program, rethinking your onboarding, or need help aligning training with business goals—I'm here to help.
               </p>
             </div>
             

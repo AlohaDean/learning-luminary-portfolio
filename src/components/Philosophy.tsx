@@ -12,17 +12,17 @@ const Philosophy = () => {
           <div className="mb-12 bg-nordic-blue bg-opacity-5 p-8 rounded-lg border-l-4 border-nordic-blue">
             <h3 className="text-2xl font-light text-nordic-blue mb-4">Design for People. Deliver with Purpose.</h3>
             <p className="text-gray-700 mb-4">
-              Learning is personal. That's why I listen first, design with intention, and always focus on the learner experience. Whether I'm building interactive media or revamping a QA process, my goal is to reduce friction and make learning feel natural.
+              Learning is personal. That's why I listen first, design with intention, and stay focused on the learner experience. Whether I'm building interactive media or optimizing a process, my goal is to reduce friction and make learning feel natural.
             </p>
             <p className="text-gray-700">
-              I don't just follow trends—I apply what works, tailor it to the team, and make it scalable.
+              I don't follow trends—I apply what works, adapt it to the team, and scale it with purpose.
             </p>
           </div>
 
           <div className="p-8 rounded-lg bg-gradient-to-r from-nordic-blue to-nordic-lightBlue text-white">
-            <h3 className="text-2xl font-light mb-4">🎯 Vision Statement</h3>
+            <h3 className="text-2xl font-light mb-4">🎯 Vision</h3>
             <p className="text-xl italic">
-              To create accessible, human-centered digital learning experiences that elevate understanding, support career growth, and make lasting impact—across teams, industries, and cultures.
+              To design accessible, human-centered digital learning experiences that elevate understanding, support career growth, and create lasting impact—across teams, industries, and cultures.
             </p>
           </div>
         </div>

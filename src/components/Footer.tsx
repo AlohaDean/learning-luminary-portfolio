@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </Link>
             <p className="mt-4 text-gray-200 max-w-md">
-              Building learning experiences that transcend screens—creating connections that transform lives.
+              Creating life-changing connections through immersive learning
             </p>
           </div>
           

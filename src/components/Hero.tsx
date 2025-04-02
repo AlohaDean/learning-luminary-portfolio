@@ -28,7 +28,7 @@ const Hero = () => {
               Creating life-changing connections through immersive learning.
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
-              I'm Dean Ahlgren—an instructional designer and e-learning developer with over 20 years of experience creating meaningful learning solutions. My approach blends technology, creativity, and compassion to help teams thrive in fast-paced environments.
+              I'm Dean Ahlgren, and I create meaningful, human-centered learning solutions. My approach blends technology, creativity, and an adaptive mindset to help people thrive in today's fast-paced world.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/portfolio" className="btn-primary">

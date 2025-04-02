@@ -6,7 +6,7 @@ const Experience = () => {
     <section className="py-24 bg-nordic-offWhite">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <h2 className="section-title">💼 Experience Highlight</h2>
+          <h2 className="section-title">💼 Experience at a Glance</h2>
           <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
         </div>
 
@@ -15,9 +15,9 @@ const Experience = () => {
             <div className="mb-6 flex justify-center">
               <Star className="text-nordic-gold" size={48} />
             </div>
-            <h3 className="text-2xl font-light text-nordic-blue mb-4">Over 200 University Courses</h3>
+            <h3 className="text-2xl font-light text-nordic-blue mb-4">200+ University Courses</h3>
             <p className="text-gray-700">
-              From foundational design classes to immersive VR labs, I've developed curriculum that reaches across departments and disciplines.
+              From design foundations to immersive VR labs—developed across departments and disciplines.
             </p>
           </div>
 
@@ -31,7 +31,7 @@ const Experience = () => {
             </div>
             <h3 className="text-2xl font-light text-nordic-blue mb-4">18 Years Remote Experience</h3>
             <p className="text-gray-700">
-              I was the first in my department to work remotely full-time. I built the workflows others now rely on.
+              Built the original remote workflows my teams still use. Worked internationally from Seoul and across the U.S., including LA, Denver, and Honolulu.
             </p>
           </div>
 
@@ -43,9 +43,9 @@ const Experience = () => {
                 className="h-12 w-auto" 
               />
             </div>
-            <h3 className="text-2xl font-light text-nordic-blue mb-4">AI-Enhanced Tools</h3>
+            <h3 className="text-2xl font-light text-nordic-blue mb-4">AI-Enhanced Development</h3>
             <p className="text-gray-700">
-              I've used AI to speed up development and support instructional clarity—like transforming complex QA spreadsheets into interactive tools that actually work.
+              Used AI to speed up design and simplify complexity—like transforming bulky QA spreadsheets into interactive tools that actually work.
             </p>
           </div>
         </div>
