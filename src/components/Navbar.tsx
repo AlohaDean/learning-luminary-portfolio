@@ -35,18 +35,14 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/a1a568b6-5f11-4995-8734-81d6595f64a8.png" 
-            alt="Ahlgren Academy Logo" 
-            className="h-10 w-auto"
-          />
+          <span className="text-nordic-blue text-xl font-bold">Dean Ahlgren</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <Link to="/" className={`nav-link ${isActive('/') ? 'active-nav-link' : ''}`}>Home</Link>
           <Link to="/portfolio" className={`nav-link ${isActive('/portfolio') ? 'active-nav-link' : ''}`}>Portfolio</Link>
-          <Link to="/blog" className={`nav-link ${isActive('/blog') ? 'active-nav-link' : ''}`}>Blog</Link>
+          <Link to="/blog" className={`nav-link ${isActive('/blog') || isActive('/photography') ? 'active-nav-link' : ''}`}>Blog</Link>
           <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active-nav-link' : ''}`}>Contact</Link>
         </nav>
 
@@ -77,7 +73,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/blog" 
-                className={`py-2 px-4 ${isActive('/blog') ? 'text-nordic-blue font-medium' : 'text-foreground'}`}
+                className={`py-2 px-4 ${isActive('/blog') || isActive('/photography') ? 'text-nordic-blue font-medium' : 'text-foreground'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
