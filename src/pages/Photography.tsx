@@ -92,6 +92,14 @@ const Photography = () => {
 
         <section className="py-16 bg-nordic-offWhite">
           <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="section-title">Photo Gallery</h2>
+              <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
+              <p className="text-gray-600">
+                A collection of landscapes and abstract compositions captured during my travels and creative explorations.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {photoItems.map(photo => (
                 <div 
@@ -109,6 +117,13 @@ const Photography = () => {
                   <div className="p-4">
                     <h3 className="text-lg font-medium text-nordic-blue">{photo.title}</h3>
                     <p className="text-gray-600 text-sm">{photo.description}</p>
+                    {photo.isWallpaper && (
+                      <div className="mt-3">
+                        <span className="text-xs bg-nordic-gold bg-opacity-20 text-nordic-gold px-3 py-1 rounded-full">
+                          Available as wallpaper
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -121,6 +136,7 @@ const Photography = () => {
             <div className="max-w-3xl mx-auto bg-nordic-offWhite p-8 rounded-lg">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-light text-nordic-blue mb-4">Get Free Monthly Desktop Wallpapers</h2>
+                <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
                 <p className="text-gray-600">
                   Subscribe to receive a high-resolution desktop wallpaper each month, straight to your inbox.
                 </p>
@@ -185,7 +201,7 @@ const Photography = () => {
                   <h2 className="text-2xl font-medium text-nordic-blue">{selectedImage.title}</h2>
                   <button 
                     onClick={() => setSelectedImage(null)}
-                    className="text-gray-500 hover:text-gray-700"
+                    className="text-gray-500 hover:text-gray-700 text-2xl"
                   >
                     &times;
                   </button>

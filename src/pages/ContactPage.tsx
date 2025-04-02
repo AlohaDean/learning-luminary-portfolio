@@ -59,19 +59,22 @@ const ContactPage = () => {
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="section-title">Get in Touch</h2>
+              <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
+              <p className="text-gray-600">
+                Whether you're building a new learning program, reimagining your onboarding process, or just need someone to help align training with your business goals—I'm here to help.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <div className="mb-12">
-                  <h2 className="text-2xl font-light text-nordic-blue mb-6">Get in Touch</h2>
-                  <p className="text-gray-700 mb-8">
-                    Whether you're building a new learning program, reimagining your onboarding process, or just need someone to help align training with your business goals—I'm here to help.
-                  </p>
-                  
+                <div className="mb-12">                  
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <Mail className="text-nordic-gold mt-1 mr-4 flex-shrink-0" size={20} />
                       <div>
-                        <h3 className="text-lg font-medium text-nordic-blue">Email</h3>
+                        <h3 className="text-lg font-medium text-nordic-blue mb-2">Email</h3>
                         <a 
                           href="mailto:contact@deanahlgren.com" 
                           className="text-gray-700 hover:text-nordic-blue transition-colors"
@@ -84,7 +87,7 @@ const ContactPage = () => {
                     <div className="flex items-start">
                       <Linkedin className="text-nordic-gold mt-1 mr-4 flex-shrink-0" size={20} />
                       <div>
-                        <h3 className="text-lg font-medium text-nordic-blue">LinkedIn</h3>
+                        <h3 className="text-lg font-medium text-nordic-blue mb-2">LinkedIn</h3>
                         <a 
                           href="https://linkedin.com" 
                           target="_blank" 
@@ -99,7 +102,7 @@ const ContactPage = () => {
                     <div className="flex items-start">
                       <Calendar className="text-nordic-gold mt-1 mr-4 flex-shrink-0" size={20} />
                       <div>
-                        <h3 className="text-lg font-medium text-nordic-blue">Schedule a Meeting</h3>
+                        <h3 className="text-lg font-medium text-nordic-blue mb-2">Schedule a Meeting</h3>
                         <a 
                           href="#" 
                           className="text-gray-700 hover:text-nordic-blue transition-colors"
@@ -203,7 +206,7 @@ const ContactPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-2xl font-light text-nordic-blue mb-4">Available For</h2>
-              <div className="w-20 h-1 bg-nordic-gold mx-auto"></div>
+              <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

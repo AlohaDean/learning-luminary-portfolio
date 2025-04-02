@@ -115,14 +115,14 @@ const PortfolioPage = () => {
               {filteredItems.map(item => (
                 <div 
                   key={item.id} 
-                  className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                  className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedItem(item)}
                 >
                   <div className="h-48 overflow-hidden">
                     <img 
                       src={item.image} 
                       alt={item.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
                     />
                   </div>
                   <div className="p-6">
@@ -154,14 +154,14 @@ const PortfolioPage = () => {
 
         {/* Modal for project details */}
         {selectedItem && (
-          <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-75 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
               <div className="p-6">
                 <div className="flex justify-between items-start mb-6">
                   <h2 className="text-2xl font-medium text-nordic-blue">{selectedItem.title}</h2>
                   <button 
                     onClick={() => setSelectedItem(null)}
-                    className="text-gray-500 hover:text-gray-700"
+                    className="text-gray-500 hover:text-gray-700 text-2xl"
                   >
                     &times;
                   </button>
