@@ -42,7 +42,7 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <Link to="/" className={`nav-link ${isActive('/') ? 'active-nav-link' : ''}`}>Home</Link>
           <Link to="/portfolio" className={`nav-link ${isActive('/portfolio') ? 'active-nav-link' : ''}`}>Portfolio</Link>
-          <Link to="/photography" className={`nav-link ${isActive('/photography') ? 'active-nav-link' : ''}`}>Photography</Link>
+          <Link to="/blog" className={`nav-link ${isActive('/blog') || isActive('/photography') ? 'active-nav-link' : ''}`}>Blog</Link>
           <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active-nav-link' : ''}`}>Contact</Link>
         </nav>
 
@@ -72,11 +72,11 @@ const Navbar = () => {
                 Portfolio
               </Link>
               <Link 
-                to="/photography" 
-                className={`py-2 px-4 ${isActive('/photography') ? 'text-nordic-blue font-medium' : 'text-foreground'}`}
+                to="/blog" 
+                className={`py-2 px-4 ${isActive('/blog') || isActive('/photography') ? 'text-nordic-blue font-medium' : 'text-foreground'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Photography
+                Blog
               </Link>
               <Link 
                 to="/contact" 
