@@ -50,20 +50,11 @@ const BlogPostPage = () => {
               </Collapsible>
             </div>
             
-            {/* Main Content - Now full width */}
+            {/* Main Content */}
             <div className="md:w-4/5 md:pl-8">
-              <div className="bg-white rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300 h-[75vh]">
-                <div className="relative p-8 h-full overflow-auto">
-                  <BlogContent post={post} />
-                  <CommentSection postId={post.id} />
-                  
-                  {/* Book styling elements */}
-                  <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute left-0 inset-y-0 w-[3px] bg-gradient-to-r from-gray-300 to-transparent"></div>
-                    <div className="absolute bottom-0 inset-x-0 h-[3px] bg-gradient-to-t from-gray-300 to-transparent"></div>
-                    <div className="absolute right-0 inset-y-0 w-[3px] bg-gradient-to-l from-gray-300 to-transparent"></div>
-                  </div>
-                </div>
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <BlogContent post={post} />
+                <CommentSection postId={post.id} />
               </div>
             </div>
           </div>
