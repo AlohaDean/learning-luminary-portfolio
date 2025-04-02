@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -64,6 +63,16 @@ const ContactPage = () => {
             </p>
           </div>
         </section>
+
+        <div className="flex flex-1 max-w-sm mx-auto my-8">
+          <div className="rounded-lg overflow-hidden border-4 border-white shadow-xl">
+            <img 
+              src="/lovable-uploads/4ee4f273-2293-4298-a228-6233895f833b.png" 
+              alt="Dean Ahlgren" 
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">

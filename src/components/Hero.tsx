@@ -40,9 +40,9 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex-1 max-w-md">
-            <div className="rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <div className="rounded-lg overflow-hidden border-4 border-white shadow-xl">
               <img 
-                src="/lovable-uploads/ba83da5e-c919-4514-af6f-53211d710a79.png" 
+                src="/lovable-uploads/4ee4f273-2293-4298-a228-6233895f833b.png" 
                 alt="Dean Ahlgren" 
                 className="w-full h-auto"
               />
