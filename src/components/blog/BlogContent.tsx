@@ -27,7 +27,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
   }, [post]);
 
   return (
-    <article className="w-full max-w-none">
+    <article className="w-full">
       <h1 className="text-3xl md:text-4xl font-light text-nordic-blue mb-4">{post.title}</h1>
       
       <div className="flex flex-wrap items-center text-sm text-gray-500 mb-6 gap-y-2">
@@ -55,7 +55,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
         </div>
       )}
       
-      <div className="prose prose-lg max-w-none w-full">
+      <div className="prose prose-lg max-w-none">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
       
