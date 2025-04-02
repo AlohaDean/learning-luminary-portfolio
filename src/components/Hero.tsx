@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-nordic-blue mb-6">
-              Designing Learning that Connects. Developing Solutions that Last.
+              Building learning experiences that transcend screens—creating connections that transform lives.
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
               I'm Dean Ahlgren—an instructional designer and e-learning developer with over 20 years of experience creating meaningful learning solutions. My approach blends technology, creativity, and compassion to help teams thrive in fast-paced environments.
