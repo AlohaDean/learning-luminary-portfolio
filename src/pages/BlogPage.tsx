@@ -81,9 +81,9 @@ const BlogPage = () => {
                 </Collapsible>
               </div>
               
-              {/* Main Content - Now full width and with "floating book" styling */}
+              {/* Main Content - Now full width */}
               <div className="md:w-4/5 md:pl-8">
-                <div className="bg-white rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300 h-[75vh] overflow-y-auto">
+                <div className="bg-white rounded-lg shadow-lg transform hover:-translate-y-1 transition-all duration-300 h-[75vh] overflow-auto">
                   <div className="p-8 relative">
                     {searchQuery && (
                       <div className="mb-8 p-4 bg-white rounded-lg shadow-sm">
@@ -116,7 +116,7 @@ const BlogPage = () => {
                       </div>
                     )}
                     
-                    {/* Add book styling elements */}
+                    {/* Book styling elements */}
                     <div className="absolute inset-0 pointer-events-none">
                       <div className="absolute left-0 inset-y-0 w-[3px] bg-gradient-to-r from-gray-300 to-transparent"></div>
                       <div className="absolute bottom-0 inset-x-0 h-[3px] bg-gradient-to-t from-gray-300 to-transparent"></div>

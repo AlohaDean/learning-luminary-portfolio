@@ -6,7 +6,6 @@ import { formatDate } from '../../utils/dateUtils';
 import ReactMarkdown from 'react-markdown';
 import { Separator } from '@/components/ui/separator';
 import SocialShareButtons from './SocialShareButtons';
-import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface BlogContentProps {
   post: BlogPost;
@@ -28,7 +27,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
   }, [post]);
 
   return (
-    <article className="bg-white rounded-lg w-full">
+    <article className="w-full max-w-none">
       <h1 className="text-3xl md:text-4xl font-light text-nordic-blue mb-4">{post.title}</h1>
       
       <div className="flex flex-wrap items-center text-sm text-gray-500 mb-6 gap-y-2">
