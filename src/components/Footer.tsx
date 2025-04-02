@@ -11,8 +11,18 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-nordic-darkGray text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="relative text-white py-12">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/bb70c31c-2958-4ce0-af8d-dca20b503c8e.png" 
+          alt="Footer background" 
+          className="w-full h-full object-cover" 
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
@@ -22,21 +32,21 @@ const Footer = () => {
                 className="h-12 w-auto" 
               />
             </Link>
-            <p className="mt-4 text-gray-300 max-w-md">
+            <p className="mt-4 text-gray-200 max-w-md">
               Building learning experiences that transcend screens—creating connections that transform lives.
             </p>
           </div>
           
           <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-center md:text-right">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-            <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors">Portfolio</Link>
-            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+            <Link to="/" className="text-gray-200 hover:text-white transition-colors">Home</Link>
+            <Link to="/portfolio" className="text-gray-200 hover:text-white transition-colors">Portfolio</Link>
+            <Link to="/blog" className="text-gray-200 hover:text-white transition-colors">Blog</Link>
+            <Link to="/contact" className="text-gray-200 hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
         
-        <div className="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">
+        <div className="mt-12 pt-6 border-t border-gray-200 border-opacity-20 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-300 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Dean Ahlgren. All rights reserved.
           </div>
           
