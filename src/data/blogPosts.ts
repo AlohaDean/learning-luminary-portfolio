@@ -79,10 +79,10 @@ Organizations that recognize and support this evolution will be better positione
 
 *What changes have you observed in instructional technology roles? I'd love to hear your thoughts in the comments below.*
     `,
-    featuredImage: '/lovable-uploads/77905c03-a0cb-45c3-8d10-cbe7f1efd5a4.png',
+    featuredImage: '/lovable-uploads/e544f196-25be-4d6c-bd77-43badac65b7d.png',
     category: 'instructional-design',
     author: 'Dean Ahlgren',
-    publishedDate: '2023-10-15',
+    publishedDate: '2025-12-03',
     isPublished: true,
     isDraft: false,
     tags: ['instructional design', 'technology', 'e-learning', 'professional development']
