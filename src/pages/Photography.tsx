@@ -81,10 +81,18 @@ const Photography = () => {
       <Navbar />
       
       <main className="pt-24 pb-16">
-        <section className="bg-nordic-blue text-white py-16">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-light mb-6">Photography</h1>
-            <p className="text-lg max-w-2xl opacity-90">
+        <section className="relative py-16">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-nordic-blue to-transparent opacity-70 z-10"></div>
+            <img 
+              src="/lovable-uploads/4dede139-f3af-4a6f-90b4-670d0f277eab.png" 
+              alt="Photography background" 
+              className="w-full h-full object-cover opacity-40" 
+            />
+          </div>
+          <div className="container mx-auto px-4 relative z-20">
+            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">Photography</h1>
+            <p className="text-lg max-w-2xl text-white opacity-90">
               When I'm not designing learning experiences, I explore the world through my camera lens. Enjoy my collection of landscapes and abstract compositions.
             </p>
           </div>

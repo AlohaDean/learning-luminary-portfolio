@@ -82,10 +82,18 @@ const PortfolioPage = () => {
       <Navbar />
       
       <main className="pt-24 pb-16">
-        <section className="bg-nordic-blue text-white py-16">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-light mb-6">Portfolio</h1>
-            <p className="text-lg max-w-2xl opacity-90">
+        <section className="relative py-16">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-nordic-blue to-transparent opacity-80 z-10"></div>
+            <img 
+              src="/lovable-uploads/f5d73a61-7ae0-48a4-94cb-6e97cd3da0d1.png" 
+              alt="Portfolio background" 
+              className="w-full h-full object-cover opacity-40" 
+            />
+          </div>
+          <div className="container mx-auto px-4 relative z-20">
+            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">Portfolio</h1>
+            <p className="text-lg max-w-2xl text-white opacity-90">
               Explore a selection of my work in e-learning development, instructional design, and educational technology implementation.
             </p>
           </div>
