@@ -1,3 +1,4 @@
+
 import { BlogPost, BlogCategory, BlogCategoryInfo } from '../types/blog';
 
 export const BLOG_CATEGORIES: BlogCategoryInfo[] = [
@@ -86,7 +87,7 @@ So if you're still watching from the sidelines, consider this your nudge. You do
 
 After all, the future of learning is already here. We just have to design for it.
     `,
-    featuredImage: '/lovable-uploads/1af08880-5ae8-4e52-9421-43c978db4317.png',
+    featuredImage: '', // Removed the broken image URL
     category: 'instructional-design',
     author: 'Dean Ahlgren',
     publishedDate: '2025-12-03',

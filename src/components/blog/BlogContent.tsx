@@ -45,7 +45,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
         </div>
       </div>
       
-      {post.featuredImage && (
+      {post.featuredImage && post.featuredImage.trim() !== '' && (
         <div className="mb-8">
           <img 
             src={post.featuredImage} 

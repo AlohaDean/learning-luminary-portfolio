@@ -13,13 +13,19 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
   return (
     <Link to={`/blog/${post.slug}`} className="block">
       <Card className="h-full overflow-hidden hover:shadow-md transition-all duration-300">
-        <div className="h-48 overflow-hidden">
-          <img 
-            src={post.featuredImage} 
-            alt={post.title}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-          />
-        </div>
+        {post.featuredImage && post.featuredImage.trim() !== '' ? (
+          <div className="h-48 overflow-hidden">
+            <img 
+              src={post.featuredImage} 
+              alt={post.title}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+            />
+          </div>
+        ) : (
+          <div className="h-16 bg-gray-100 flex items-center justify-center">
+            <span className="text-gray-400 text-sm">No featured image</span>
+          </div>
+        )}
         <CardContent className="p-6">
           <div className="flex items-center text-sm text-gray-500 mb-3">
             <Calendar size={14} className="mr-1" />
