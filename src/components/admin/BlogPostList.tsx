@@ -23,6 +23,12 @@ const BlogPostList = ({ posts, onEdit, onDelete, onView, onNewPost }: BlogPostLi
     return true;
   });
 
+  const handleDelete = (postId: string) => {
+    if (window.confirm('Are you sure you want to delete this post?')) {
+      onDelete(postId);
+    }
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
@@ -144,7 +150,7 @@ const BlogPostList = ({ posts, onEdit, onDelete, onView, onNewPost }: BlogPostLi
                       <Button 
                         variant="ghost" 
                         size="sm" 
-                        onClick={() => onDelete(post.id)}
+                        onClick={() => handleDelete(post.id)}
                         className="text-red-500 hover:text-red-700"
                       >
                         <Trash2 size={16} />

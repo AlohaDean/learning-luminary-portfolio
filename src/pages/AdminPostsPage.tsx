@@ -75,13 +75,11 @@ const AdminPostsPage = () => {
   };
   
   const handleDelete = (postId: string) => {
-    if (window.confirm('Are you sure you want to delete this post?')) {
-      setPosts(posts.filter(post => post.id !== postId));
-      toast({
-        title: "Post deleted",
-        description: "The post has been successfully deleted",
-      });
-    }
+    setPosts(posts.filter(post => post.id !== postId));
+    toast({
+      title: "Post deleted",
+      description: "The post has been successfully deleted",
+    });
   };
   
   // Show editor if creating or editing
