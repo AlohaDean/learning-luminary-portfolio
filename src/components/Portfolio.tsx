@@ -11,7 +11,8 @@ const portfolioItems: PortfolioItem[] = [
     client: 'Korean Language Studies',
     description: 'Hangul (한글) is the Korean alphabet, created in 1443 during the reign of King Sejong the Great. Before Hangul, Koreans used complex Chinese characters (Hanja) which were difficult for common people to learn.',
     technologies: ['Language', 'History', 'Cultural Studies'],
-    category: 'educational'
+    category: 'educational',
+    image: null // Adding the required image property with null value
   }
 ];
 
