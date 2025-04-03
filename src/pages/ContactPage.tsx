@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -64,32 +65,113 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <div className="flex flex-1 max-w-sm mx-auto my-8">
-          <div className="relative w-[90%] mx-auto">
-            <div className="absolute inset-0 bg-white shadow-xl rounded-xl"></div>
-            <div className="relative overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/47f3f70d-6171-4d8c-98c6-737cee3097a0.png" 
-                alt="Dean Ahlgren" 
-                className="w-full h-auto" 
-              />
-              <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white rounded-xl"></div>
-            </div>
-          </div>
-        </div>
-
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="section-title">Let's Connect</h2>
-              <div className="w-20 h-1 bg-nordic-gold mx-auto mt-4 mb-8"></div>
-              <p className="text-gray-600">
-                Whether you're building a new learning program, rethinking your onboarding, or need help aligning training with business goals—I'm here to help.
-              </p>
-            </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Left Column - Message and Form */}
               <div>
+                <div className="mb-8">
+                  <h2 className="section-title">Let's Connect</h2>
+                  <div className="w-20 h-1 bg-nordic-gold mt-4 mb-6"></div>
+                  <p className="text-gray-600 mb-8">
+                    Whether you're building a new learning program, rethinking your onboarding, or need help aligning training with business goals—I'm here to help.
+                  </p>
+                
+                  {/* Contact Form */}
+                  <div className="bg-nordic-offWhite p-8 rounded-lg">
+                    <h2 className="text-2xl font-light text-nordic-blue mb-6">Send a Message</h2>
+                    <form onSubmit={handleSubmit}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                          Subject
+                        </label>
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
+                        />
+                      </div>
+                      
+                      <div className="mb-6">
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                          Message
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          rows={5}
+                          required
+                          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
+                        />
+                      </div>
+                      
+                      <div>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="px-6 py-2 bg-nordic-blue text-white rounded hover:bg-opacity-90 transition-all duration-300 disabled:opacity-70"
+                        >
+                          {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Column - Image and Contact Info */}
+              <div>
+                {/* Profile image at the top */}
+                <div className="relative w-full md:max-w-sm mx-auto mb-10">
+                  <div className="absolute inset-0 bg-white shadow-xl rounded-xl"></div>
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img 
+                      src="/lovable-uploads/47f3f70d-6171-4d8c-98c6-737cee3097a0.png" 
+                      alt="Dean Ahlgren" 
+                      className="w-full h-auto" 
+                    />
+                    <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white rounded-xl"></div>
+                  </div>
+                </div>
+                
+                {/* Contact information */}
                 <div className="mb-12">                  
                   <div className="space-y-6">
                     <div className="flex items-start">
@@ -134,90 +216,6 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/ba83da5e-c919-4514-af6f-53211d710a79.png" 
-                    alt="Dean Ahlgren" 
-                    className="w-full h-auto" 
-                  />
-                </div>
-              </div>
-              
-              <div className="bg-nordic-offWhite p-8 rounded-lg">
-                <h2 className="text-2xl font-light text-nordic-blue mb-6">Send a Message</h2>
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
-                    />
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-nordic-blue"
-                    />
-                  </div>
-                  
-                  <div>
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="px-6 py-2 bg-nordic-blue text-white rounded hover:bg-opacity-90 transition-all duration-300 disabled:opacity-70"
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
