@@ -28,15 +28,6 @@ const Footer = () => {
             <p className="text-gray-200 max-w-md">
               Creating life-changing connections through immersive learning
             </p>
-            <div className="mt-4">
-              <Link to="/" className="inline-block">
-                <img 
-                  src="/lovable-uploads/d53dee14-ecaa-4b5a-9052-e69a8bfc1d0f.png" 
-                  alt="Dean Ahlgren Logo" 
-                  className="h-12 w-auto" 
-                />
-              </Link>
-            </div>
           </div>
           
           <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-center md:text-right">
