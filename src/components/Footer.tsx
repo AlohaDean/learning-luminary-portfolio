@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="inline-block">
               <img 
-                src="/lovable-uploads/714bd596-25ca-4447-9136-af5ee2c11829.png" 
+                src="/lovable-uploads/d53dee14-ecaa-4b5a-9052-e69a8bfc1d0f.png" 
                 alt="Dean Ahlgren Logo" 
                 className="h-12 w-auto" 
               />

@@ -35,11 +35,7 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/d53dee14-ecaa-4b5a-9052-e69a8bfc1d0f.png" 
-            alt="Dean Ahlgren Academy" 
-            className="h-12" 
-          />
+          <span className="text-nordic-blue text-xl font-futura">Dean Ahlgren</span>
         </Link>
 
         {/* Desktop Navigation */}
