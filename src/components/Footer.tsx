@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto px-4 relative z-10 pt-6">
+        <div className="flex flex-col md:flex-row justify-between items-center mt-4">
           <div className="mb-6 md:mb-0">
             <p className="text-gray-200 max-w-md">
               Creating life-changing connections through immersive learning
