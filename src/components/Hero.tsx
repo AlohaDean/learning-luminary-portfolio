@@ -40,28 +40,20 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex-1 max-w-md">
-            <div className="relative">
-              {/* Custom shaped container */}
-              <div className="absolute inset-0 bg-white" style={{
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-                borderRadius: "12px"
-              }}></div>
+            {/* 10% smaller container with rounded corners */}
+            <div className="relative w-[90%] mx-auto">
+              {/* Background shape with uniform rounded corners */}
+              <div className="absolute inset-0 bg-white rounded-xl"></div>
               
-              {/* Image with custom shape */}
-              <div className="relative overflow-hidden" style={{
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-                borderRadius: "12px"
-              }}>
+              {/* Image container with uniform rounded corners */}
+              <div className="relative overflow-hidden rounded-xl">
                 <img 
                   src="/lovable-uploads/47f3f70d-6171-4d8c-98c6-737cee3097a0.png" 
                   alt="Dean Ahlgren" 
                   className="w-full h-auto"
                 />
-                {/* Shadow overlay for depth */}
-                <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white" style={{
-                  clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-                  borderRadius: "12px"
-                }}></div>
+                {/* Shadow overlay for depth with uniform rounded corners */}
+                <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white rounded-xl"></div>
               </div>
             </div>
           </div>

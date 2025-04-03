@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -66,28 +65,15 @@ const ContactPage = () => {
         </section>
 
         <div className="flex flex-1 max-w-sm mx-auto my-8">
-          <div className="relative w-full">
-            {/* Custom shaped container */}
-            <div className="absolute inset-0 bg-white shadow-xl" style={{
-              clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-              borderRadius: "12px"
-            }}></div>
-            
-            {/* Image with custom shape */}
-            <div className="relative overflow-hidden" style={{
-              clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-              borderRadius: "12px"
-            }}>
+          <div className="relative w-[90%] mx-auto">
+            <div className="absolute inset-0 bg-white shadow-xl rounded-xl"></div>
+            <div className="relative overflow-hidden rounded-xl">
               <img 
                 src="/lovable-uploads/47f3f70d-6171-4d8c-98c6-737cee3097a0.png" 
                 alt="Dean Ahlgren" 
                 className="w-full h-auto" 
               />
-              {/* Shadow overlay for depth */}
-              <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white" style={{
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%)",
-                borderRadius: "12px"
-              }}></div>
+              <div className="absolute inset-0 shadow-inner pointer-events-none border-4 border-white rounded-xl"></div>
             </div>
           </div>
         </div>
