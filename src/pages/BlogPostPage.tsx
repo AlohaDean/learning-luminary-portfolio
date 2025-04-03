@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BlogSidebar from '../components/blog/BlogSidebar';
 import BlogContent from '../components/blog/BlogContent';
-import CommentSection from '../components/blog/CommentSection';
 import { getBlogPostBySlug } from '../data/blogPosts';
 import { ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
@@ -57,7 +56,6 @@ const BlogPostPage = () => {
             <div className="md:w-3/4 lg:w-4/5">
               <Card className="p-8">
                 <BlogContent post={post} />
-                <CommentSection postId={post.id} />
               </Card>
             </div>
           </div>

@@ -11,7 +11,7 @@ interface User {
 interface AuthContextType {
   user: User | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (username: string, password: string) => Promise<void>;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -43,13 +43,13 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setLoading(false);
   }, []);
   
-  const login = async (email: string, password: string) => {
-    // This is a mock login - in a real app, this would call an API
-    if (email === 'admin@example.com' && password === 'password') {
+  const login = async (username: string, password: string) => {
+    // Updated to use 'dean' and 'daddy' as credentials
+    if (username === 'dean' && password === 'daddy') {
       const user: User = {
         id: '1',
-        name: 'Admin User',
-        email: 'admin@example.com',
+        name: 'Dean Ahlgren',
+        email: 'dean@example.com',
         role: 'admin'
       };
       
@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       return;
     }
     
-    throw new Error('Invalid email or password');
+    throw new Error('Invalid username or password');
   };
   
   const logout = () => {

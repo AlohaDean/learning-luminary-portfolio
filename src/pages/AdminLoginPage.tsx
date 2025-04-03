@@ -8,7 +8,7 @@ import { toast } from '@/hooks/use-toast';
 
 const AdminLoginPage = () => {
   const { login, isAuthenticated } = useAuth();
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
@@ -17,7 +17,7 @@ const AdminLoginPage = () => {
     setIsLoading(true);
     
     try {
-      await login(email, password);
+      await login(username, password);
       toast({
         title: "Logged in successfully",
         description: "Welcome to the admin panel",
@@ -25,7 +25,7 @@ const AdminLoginPage = () => {
     } catch (error) {
       toast({
         title: "Login failed",
-        description: "Invalid email or password",
+        description: "Invalid username or password",
         variant: "destructive",
       });
     } finally {
@@ -48,15 +48,15 @@ const AdminLoginPage = () => {
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              Email
+            <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
+              Username
             </label>
             <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@example.com"
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="dean"
               required
               autoFocus
             />
@@ -71,7 +71,7 @@ const AdminLoginPage = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="password"
+              placeholder="Password"
               required
             />
           </div>
@@ -88,8 +88,8 @@ const AdminLoginPage = () => {
           
           <div className="text-center text-sm text-gray-500">
             <p>Demo credentials:</p>
-            <p>Email: admin@example.com</p>
-            <p>Password: password</p>
+            <p>Username: dean</p>
+            <p>Password: daddy</p>
           </div>
         </form>
       </div>

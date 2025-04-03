@@ -1,12 +1,25 @@
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { File, Settings, LogOut } from 'lucide-react';
+import { useAuth } from '../../contexts/AuthContext';
+import { toast } from '@/hooks/use-toast';
 
 const AdminSidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { logout } = useAuth();
   
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const handleLogout = () => {
+    logout();
+    toast({
+      title: "Logged out",
+      description: "You have been logged out successfully"
+    });
+    navigate('/');
   };
 
   return (
@@ -48,7 +61,7 @@ const AdminSidebar = () => {
       <div className="p-4 border-t">
         <button
           className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition-colors"
-          onClick={() => {/* Handle logout */}}
+          onClick={handleLogout}
         >
           <LogOut size={18} className="mr-3" />
           Logout

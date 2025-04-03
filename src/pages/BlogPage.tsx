@@ -6,9 +6,11 @@ import Footer from '../components/Footer';
 import BlogSidebar from '../components/blog/BlogSidebar';
 import { BLOG_POSTS, getBlogPostsByCategory, searchBlogPosts } from '../data/blogPosts';
 import { BlogCategory } from '../types/blog';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Plus, LogIn } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Card, CardContent } from '@/components/ui/card';
+import { useAuth } from '../contexts/AuthContext';
 
 const BlogPage = () => {
   const { category } = useParams<{ category?: string }>();
@@ -16,6 +18,7 @@ const BlogPage = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const { isAuthenticated, user } = useAuth();
   
   // Extract search query from URL
   useEffect(() => {
@@ -46,6 +49,14 @@ const BlogPage = () => {
   const handlePostClick = (slug: string) => {
     navigate(`/blog/${slug}`);
   };
+
+  const handleLoginClick = () => {
+    navigate('/admin/login');
+  };
+
+  const handleNewPostClick = () => {
+    navigate('/admin/posts');
+  };
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -63,7 +74,26 @@ const BlogPage = () => {
             />
           </div>
           <div className="container mx-auto px-4 relative z-20">
-            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">{getPageTitle()}</h1>
+            <div className="flex justify-between items-center">
+              <h1 className="text-4xl md:text-5xl font-light text-white mb-6">{getPageTitle()}</h1>
+              {isAuthenticated ? (
+                <Button 
+                  onClick={handleNewPostClick}
+                  variant="outline"
+                  className="bg-white hover:bg-gray-100"
+                >
+                  <Plus className="mr-2" size={16} /> New Post
+                </Button>
+              ) : (
+                <Button 
+                  onClick={handleLoginClick}
+                  variant="outline"
+                  className="bg-white hover:bg-gray-100"
+                >
+                  <LogIn className="mr-2" size={16} /> Admin Login
+                </Button>
+              )}
+            </div>
             <p className="text-lg max-w-2xl text-white opacity-90">
               Insights on instructional design, e-learning development, and educational technology.
             </p>
