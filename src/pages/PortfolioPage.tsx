@@ -7,66 +7,17 @@ import { PortfolioItem } from '../types';
 const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
-    title: 'Foundation-Level Design Course',
-    client: 'Academy of Art University',
-    description: 'Interactive course helping students build essential skills in design principles and techniques.',
-    technologies: ['Articulate 360', 'Adobe Creative Suite', 'D2L Brightspace'],
-    image: '/lovable-uploads/77905c03-a0cb-45c3-8d10-cbe7f1efd5a4.png',
+    title: 'The History of Hangul',
+    client: 'Korean Language Studies',
+    description: 'Hangul (한글) is the Korean alphabet, created in 1443 during the reign of King Sejong the Great. Before Hangul, Koreans used complex Chinese characters (Hanja) which were difficult for common people to learn.',
+    technologies: ['Language', 'History', 'Cultural Studies'],
     category: 'educational'
-  },
-  {
-    id: '2',
-    title: 'VR Car Design Visualization',
-    client: 'Automotive Design Department',
-    description: 'Innovative VR project transforming hand-drawn car designs into interactive 3D models.',
-    technologies: ['Unity', 'VR Development', '3D Modeling'],
-    image: '/lovable-uploads/12fef8d6-87bc-4fce-8d07-cbcf28a5ce25.png',
-    category: 'interactive'
-  },
-  {
-    id: '3',
-    title: 'QA Workflow Optimization',
-    client: 'Educational Technology Division',
-    description: 'Interactive quality assurance tool replacing complex Excel spreadsheets with user-friendly interface.',
-    technologies: ['AI Tools', 'LMS Integration', 'Workflow Automation'],
-    image: '/lovable-uploads/6f8e9bd3-7a1b-4582-817e-6bd82fd0706c.png',
-    category: 'ai'
-  },
-  {
-    id: '4',
-    title: 'Healthcare Training Program',
-    client: 'Medical Education Center',
-    description: 'Comprehensive training program for healthcare professionals focusing on patient care protocols.',
-    technologies: ['Video Production', 'Interactive Scenarios', 'Assessment Tools'],
-    image: '/lovable-uploads/2040a3ac-9046-472e-95c3-bfa69d701184.png',
-    category: 'corporate'
-  },
-  {
-    id: '5',
-    title: 'LMS Transition & Implementation',
-    client: 'Academy of Art University',
-    description: 'Led transition from custom LMS to D2L Brightspace, including faculty training and content migration.',
-    technologies: ['D2L Brightspace', 'Adobe Experience Manager', 'Migration Tools'],
-    image: '/lovable-uploads/ca965b12-8943-4ec0-8786-93376030e915.png',
-    category: 'educational'
-  },
-  {
-    id: '6',
-    title: 'AI Learning Assistant',
-    client: 'EdTech Startup',
-    description: 'Developed an AI-powered learning assistant to provide personalized feedback to students.',
-    technologies: ['NLP', 'Machine Learning', 'API Integration'],
-    image: '/lovable-uploads/fc34746d-bff5-4209-9cac-4aaabcf99c07.png',
-    category: 'ai'
   }
 ];
 
 const categories = [
   { id: 'all', label: 'All Projects' },
-  { id: 'corporate', label: 'Corporate Training' },
-  { id: 'educational', label: 'Educational Courses' },
-  { id: 'interactive', label: 'Interactive Modules' },
-  { id: 'ai', label: 'AI-Enhanced Learning' }
+  { id: 'educational', label: 'Educational Courses' }
 ];
 
 const PortfolioPage = () => {
@@ -119,19 +70,19 @@ const PortfolioPage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
               {filteredItems.map(item => (
                 <div 
                   key={item.id} 
                   className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedItem(item)}
                 >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                    />
+                  {/* Styled div instead of image */}
+                  <div className="h-48 bg-gradient-to-br from-nordic-blue to-nordic-lightBlue p-6 flex items-center justify-center">
+                    <div className="text-center">
+                      <h3 className="text-3xl font-medium text-white mb-2">한글</h3>
+                      <p className="text-white text-opacity-90">Hangul</p>
+                    </div>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-medium text-nordic-blue mb-2">{item.title}</h3>
@@ -175,17 +126,19 @@ const PortfolioPage = () => {
                   </button>
                 </div>
                 
-                <img 
-                  src={selectedItem.image} 
-                  alt={selectedItem.title} 
-                  className="w-full h-auto mb-6 rounded" 
-                />
+                {/* Styled div instead of image */}
+                <div className="h-64 bg-gradient-to-br from-nordic-blue to-nordic-lightBlue rounded mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-5xl font-medium text-white mb-3">한글</h3>
+                    <p className="text-white text-opacity-90 text-xl">Hangul</p>
+                  </div>
+                </div>
                 
                 <div className="mb-6">
                   <p className="text-sm text-gray-500 mb-2">Client: {selectedItem.client}</p>
                   <p className="text-gray-700 mb-4">{selectedItem.description}</p>
                   <p className="text-gray-700">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl nisl eu nisl. Mauris euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl nisl eu nisl.
+                    Hangul consists of 14 consonants and 10 vowels, designed scientifically to represent the sounds of the Korean language. King Sejong's creation was revolutionary because it was specifically designed to be easy to learn and use, unlike the complex Chinese characters that were previously used.
                   </p>
                 </div>
                 

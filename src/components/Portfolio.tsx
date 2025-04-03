@@ -7,30 +7,11 @@ import { PortfolioItem } from '../types';
 const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
-    title: 'Foundation-Level Design Course',
-    client: 'Academy of Art University',
-    description: 'Interactive course helping students build essential skills in design principles and techniques.',
-    technologies: ['Articulate 360', 'Adobe Creative Suite', 'D2L Brightspace'],
-    image: '/lovable-uploads/77905c03-a0cb-45c3-8d10-cbe7f1efd5a4.png',
+    title: 'The History of Hangul',
+    client: 'Korean Language Studies',
+    description: 'Hangul (한글) is the Korean alphabet, created in 1443 during the reign of King Sejong the Great. Before Hangul, Koreans used complex Chinese characters (Hanja) which were difficult for common people to learn.',
+    technologies: ['Language', 'History', 'Cultural Studies'],
     category: 'educational'
-  },
-  {
-    id: '2',
-    title: 'VR Car Design Visualization',
-    client: 'Automotive Design Department',
-    description: 'Innovative VR project transforming hand-drawn car designs into interactive 3D models.',
-    technologies: ['Unity', 'VR Development', '3D Modeling'],
-    image: '/lovable-uploads/12fef8d6-87bc-4fce-8d07-cbcf28a5ce25.png',
-    category: 'interactive'
-  },
-  {
-    id: '3',
-    title: 'QA Workflow Optimization',
-    client: 'Educational Technology Division',
-    description: 'Interactive quality assurance tool replacing complex Excel spreadsheets with user-friendly interface.',
-    technologies: ['AI Tools', 'LMS Integration', 'Workflow Automation'],
-    image: '/lovable-uploads/6f8e9bd3-7a1b-4582-817e-6bd82fd0706c.png',
-    category: 'ai'
   }
 ];
 
@@ -38,7 +19,7 @@ const Portfolio = () => {
   const [displayedItems, setDisplayedItems] = useState<PortfolioItem[]>([]);
   
   useEffect(() => {
-    setDisplayedItems(portfolioItems.slice(0, 3));
+    setDisplayedItems(portfolioItems.slice(0, 1));
   }, []);
   
   return (
@@ -52,15 +33,15 @@ const Portfolio = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 gap-8 mb-12">
           {displayedItems.map((item) => (
             <div key={item.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                />
+              {/* Styled div instead of image */}
+              <div className="h-48 bg-gradient-to-br from-nordic-blue to-nordic-lightBlue p-6 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-3xl font-medium text-white mb-2">한글</h3>
+                  <p className="text-white text-opacity-90">Hangul</p>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium text-nordic-blue mb-2">{item.title}</h3>
